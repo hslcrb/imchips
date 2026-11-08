@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0
 import { readFile, access, readdir } from 'node:fs/promises';
 import { execFileSync } from 'node:child_process';
-import { join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
 const root = new URL('../', import.meta.url);
 const required = [
@@ -30,7 +30,7 @@ if (!manifest.icons.some(item => item.src === '/icon.svg')) errors.push('PWA ico
 const app = await read('app.js');
 if (!app.includes('serviceWorker') || !app.includes("'/sw.js'")) errors.push('Service worker is not registered');
 for (const path of ['app.js','sw.js','scripts/check.mjs']) {
-  try { execFileSync(process.execPath, ['--check', new URL(path, root).pathname], { stdio: 'pipe' }); }
+  try { execFileSync(process.execPath, ['--check', fileURLToPath(new URL(path, root))], { stdio: 'pipe' }); }
   catch { errors.push('JavaScript syntax failed: ' + path); }
 }
 const license = await read('LICENSE');

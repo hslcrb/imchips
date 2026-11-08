@@ -1,0 +1,19 @@
+{
+  "name": "imchips — 이미지 작업실",
+  "short_name": "imchips",
+  "description": "브라우저에서 안전하게 이미지 편집, 크기 조정, 포맷 변환",
+  "lang": "ko",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f8f9fc",
+  "theme_color": "#f8f9fc",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

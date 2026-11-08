@@ -35,4 +35,6 @@ All file decoding, drawing and encoding are local. The site makes ordinary reque
 
 Serve the repository root with a static HTTP server, for example `python -m http.server 8000`, then open `http://localhost:8000`. Service workers do not work on `file://`.
 
-MIT License.
+## Deployment status
+
+Cloudflare Pages project: `imchips` · [imchips.pages.dev](https://imchips.pages.dev) · [imchips.rhee.life](https://imchips.rhee.life). Git integration deploys changes to `main` automatically.

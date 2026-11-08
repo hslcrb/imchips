@@ -1,0 +1,25 @@
+name: Feature request
+description: Propose an improvement to imchips
+title: "[Feature] "
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or user need
+      description: Describe the task you want to accomplish.
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed solution
+      description: Include suggested UX and examples.
+    validations:
+      required: true
+  - type: textarea
+    id: constraints
+    attributes:
+      label: Privacy, browser and deployment considerations
+      description: Mention any new dependencies, file uploads or offline limitations.
+    validations:
+      required: false

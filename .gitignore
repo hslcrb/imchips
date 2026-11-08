@@ -1,0 +1,12 @@
+.DS_Store
+Thumbs.db
+*.log
+node_modules/
+dist/
+.cache/
+.wrangler/
+.env
+.env.*
+!.env.example
+coverage/
+*.zip

@@ -1,3 +1,5 @@
+// Copyright 2026 Rheehose
+// SPDX-License-Identifier: Apache-2.0
 (()=>{'use strict';
 const $=id=>document.getElementById(id);const state={items:[],selected:0,mode:'px',rotation:0,flipX:false,flipY:false,working:false};const fmtBytes=n=>n<1024? n+' B':n<1048576?(n/1024).toFixed(1)+' KB':(n/1048576).toFixed(2)+' MB';const clamp=(v,min,max)=>Math.max(min,Math.min(max,Math.round(v)));const ext={'image/jpeg':'jpg','image/png':'png','image/webp':'webp','image/avif':'avif'};const setStatus=t=>$('status').textContent=t;
 if('serviceWorker' in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('/sw.js').catch(()=>{}));
